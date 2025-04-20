@@ -1,0 +1,2 @@
+rootProject.name = 'aihomework'
+include(":task-2-api-testing")
