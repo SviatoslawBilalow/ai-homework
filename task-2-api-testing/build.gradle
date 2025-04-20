@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // REST-assured for API testing
+    testImplementation 'io.rest-assured:rest-assured:5.3.0'
+
+    // JUnit 5 (Jupiter)
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+
+    // Jackson for JSON parsing (optional, in case of mapping)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
